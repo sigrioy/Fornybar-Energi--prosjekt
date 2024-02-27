@@ -5,10 +5,9 @@ import matplotlib.pyplot as plt
 
 
 " Importing solar radiation data"
-# SJEKK SCV FORMAT! Det finnes utfordringen med "date" format
 
-data_Tromso = pd.read_csv('/Users/sigridoyre/Documents/fornybar/prosjekt/solinnstrålingtromsø.csv', skiprows=9)
-data_Kristiansand = pd.read_csv('/Users/sigridoyre/Documents/fornybar/prosjekt/solinnstrålingkristiansand.csv')
+data_Tromso = pd.read_csv('solinnstrålingtromsø.csv', skiprows=9)
+data_Kristiansand = pd.read_csv('solinnstrålingkristiansand.csv')
 
 "-----------------------------Plotter solinnstråling iog temp--------------------------------"
 
@@ -34,11 +33,11 @@ def plot_solinnstraling(data, sted, color):
     plt.show()
 
 # Solinnstrålingsdata for Tromsø
-data_tromso = f_solinnstraling('/Users/sigridoyre/Documents/fornybar/prosjekt/solinnstrålingtromsø.csv')
+data_tromso = f_solinnstraling('solinnstrålingtromsø.csv')
 plot_solinnstraling(data_tromso, 'Tromsø', 'yellow')
 
 # Solinnstrålingsdata for Kristiansand 
-data_kristiansand = f_solinnstraling('/Users/sigridoyre/Documents/fornybar/prosjekt/solinnstrålingkristiansand.csv')
+data_kristiansand = f_solinnstraling('solinnstrålingkristiansand.csv')
 plot_solinnstraling(data_kristiansand, 'Kristiansand', 'orange')
 
 "Load temperatur data"
