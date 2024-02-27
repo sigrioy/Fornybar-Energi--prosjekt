@@ -1,5 +1,6 @@
 import numpy as np
-
+import pandas as np
+import matplotlib.pyplot as plt
 
 
 '----import filer fra energiberegning bolig -----'
